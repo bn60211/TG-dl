@@ -256,8 +256,6 @@ jobs:
 
   # Main download job - runs only when activated
   tg-download:
-    needs: check-activation
-    if: needs.check-activation.outputs.is_activated == 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
